@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#welcome-section">About</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a id="profile-link" href="https://github.com/chuc1230" target="_blank">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="welcome-section">
+        <h1>Hey I Am Chuc</h1>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-tile">
+            <h3>Project Title</h3>
+            <p>Description of the project.</p>
+            <a href="https://github.com/chuc1230/web20241_week4_homework" target="_blank">View Project</a>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
